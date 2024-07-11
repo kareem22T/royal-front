@@ -263,8 +263,11 @@ const Home = () => {
           tabIndex="0"
         >
           <div className="container">
-          <div className="row justify-content-center">
-              <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+          <div className="row justify-content-center" style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))"
+          }}>
+              <div className=" mb-3">
               <Link className=" text-decoration-none text-black" to={"./recipeMedical"}>
                 <div className={Styles.cardHome}>
                 <i className="fa-solid fa-capsules mb-3 fs-2"></i>
@@ -273,7 +276,7 @@ const Home = () => {
                 </Link>
               </div>
 
-              <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+              <div className=" mb-3">
               <Link className=" text-decoration-none text-black" to={'./medicalTests'}>
 
                 <div className={Styles.cardHome}>
@@ -283,7 +286,7 @@ const Home = () => {
                 </Link>
 
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+              <div className=" mb-3">
               <Link className=" text-decoration-none text-black" to={'./homeVisit'}>
                 <div className={Styles.cardHome}>
                 <i className="fa-solid fa-home mb-3 fs-2"></i>
@@ -291,7 +294,7 @@ const Home = () => {
                 </div>
                 </Link>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+              <div className=" mb-3">
               <Link className=" text-decoration-none text-black" to={'/branches'}>
                 <div className={Styles.cardHome}>
                 <i className="fa-solid fa-location-dot mb-3 fs-2"></i>
@@ -299,7 +302,7 @@ const Home = () => {
                 </div>
                 </Link>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+              <div className=" mb-3">
               <Link className=" text-decoration-none text-black" to={'./Insurances'}>
 
                 <div className={Styles.cardHome}>
@@ -309,7 +312,7 @@ const Home = () => {
                 </Link>
 
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+              <div className=" mb-3">
               <Link className=" text-decoration-none text-black" to={'/doctor'}>
                 <div className={Styles.cardHome}>
                 <i className="fa-solid fa-phone mb-3 fs-2"></i>
@@ -317,7 +320,7 @@ const Home = () => {
                 </div>
                 </Link>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+              <div className=" mb-3">
               <Link className=" text-decoration-none text-black" to={'/Vaccinations'}>
 
                 <div className={Styles.cardHome}>
