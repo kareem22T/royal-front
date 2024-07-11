@@ -1,11 +1,6 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
 import Styles from './Home.module.css';
 import VaccinesIcon from '@mui/icons-material/Vaccines';
 import { Carousel } from 'react-bootstrap';
@@ -19,6 +14,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { FreeMode, Navigation, Autoplay } from "swiper/modules";
 import { useSelector } from 'react-redux';
+import hero1 from "./../../imgs/hero.jpg"
+import hero2 from "./../../imgs/hero_1.jpg"
+import hero3 from "./../../imgs/hero_2.jpg"
+import hero4 from "./../../imgs/hero_3.jpg"
+import hero5 from "./../../imgs/hero_4.jpg"
+import hero6 from "./../../imgs/hero_5.jpeg"
 
 const showSuccessMsg = (msg) => {
   toast.success(msg, {
@@ -112,7 +113,7 @@ const Home = () => {
                   className='d-block w-100'
                   height={600}
                   style={{objectFit: 'cover', minHeight: "calc(100vh - 80px)"}}
-                  src="https://as2.ftcdn.net/v2/jpg/01/36/40/63/1000_F_136406352_ti3nfF1Zs5iioMwB7QFoicmUXw4q4G7n.jpg"
+                  src={hero1}
                   alt="Slide 1"
                 />
               </Carousel.Item>
@@ -121,7 +122,7 @@ const Home = () => {
                   className='d-block w-100'
                   height={600}
                   style={{objectFit: 'cover', minHeight: "calc(100vh - 80px)"}}
-                  src="https://as2.ftcdn.net/v2/jpg/01/36/86/99/1000_F_136869973_nf2llNAYQcnsnqOFx0JXkMHxH9uXEbHs.jpg"
+                  src={hero2}
                   alt="Slide 1"
                 />
               </Carousel.Item>
@@ -130,8 +131,8 @@ const Home = () => {
                   className='d-block w-100'
                   height={600}
                   style={{objectFit: 'cover', minHeight: "calc(100vh - 80px)"}}
-                  src="https://as1.ftcdn.net/v2/jpg/01/37/14/18/1000_F_137141877_sGZV4s0SryGmrnfymp1qzt0xNLYfU3qC.jpg"
-                  alt="Slide 2"
+                  src={hero3}
+                  alt="Slide 1"
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -139,8 +140,8 @@ const Home = () => {
                   className='d-block w-100'
                   height={600}
                   style={{objectFit: 'cover', minHeight: "calc(100vh - 80px)"}}
-                  src="https://as2.ftcdn.net/v2/jpg/01/70/00/65/1000_F_170006526_B4foJEVWy2NwzAbQKURDrYN0ChCif3Gh.jpg"
-                  alt="Slide 3"
+                  src={hero4}
+                  alt="Slide 1"
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -148,8 +149,17 @@ const Home = () => {
                   className='d-block w-100'
                   height={600}
                   style={{objectFit: 'cover', minHeight: "calc(100vh - 80px)"}}
-                  src="https://as2.ftcdn.net/v2/jpg/00/83/47/27/1000_F_83472728_qdJuM2x77LFSeuftZ515jLuijRyM5Yzm.jpg"
-                  alt="Slide 3"
+                  src={hero5}
+                  alt="Slide 1"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className='d-block w-100'
+                  height={600}
+                  style={{objectFit: 'cover', minHeight: "calc(100vh - 80px)"}}
+                  src={hero6}
+                  alt="Slide 1"
                 />
               </Carousel.Item>
             </Carousel>

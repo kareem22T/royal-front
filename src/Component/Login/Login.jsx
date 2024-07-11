@@ -3,7 +3,7 @@
   import { useTranslation } from 'react-i18next';
   import { Link , useLocation, useNavigate} from 'react-router-dom';
   import { useFormik } from 'formik/dist';
-  import logo from '../../imgs/logo.png'
+  import logo from '../../imgs/Royal-logo.png'
   import axios from 'axios';
   import { AppContext } from '../../Context/userContext';
   import { setCredentials } from '../../features/auth/authSlice';

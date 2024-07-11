@@ -7,7 +7,7 @@ import Dropdown from 'react-multilevel-dropdown';
 import useAuth from '../../hooks/useAuth';
 import { clearCredentials } from '../../features/auth/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import logo from '../../imgs/logo.png'
+import logo from '../../imgs/Royal-logo.png'
 import profile from '../../imgs/profile.png'
 import { getSettings } from '../../features/settingsSlice';
 const Navbar = () => {

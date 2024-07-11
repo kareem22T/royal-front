@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import footer from '../../imgs/hans-reniers-lQGJCMY5qcM-unsplash.jpg'
 import Styles from './Footer.module.css';
 import { Link } from 'react-router-dom';
-import logo from '../../imgs/logo.png'
+import logo from '../../imgs/Royal-logo.png'
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -16,7 +16,7 @@ const Footer = () => {
           <img 
             src={logo}
             alt="Logo"
-            className={Styles.logo}
+            className={Styles.logo + " p-3"}
           />
         </div>
         <div className="container ">

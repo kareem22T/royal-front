@@ -6,7 +6,7 @@ import { useFormik } from 'formik/dist';
 import axios from 'axios';
 import { setCredentials } from '../../features/auth/authSlice';
 import { useDispatch } from 'react-redux';
-import logo from '../../imgs/logo.png'
+import logo from '../../imgs/Royal-logo.png'
 
 const Register = () => {
   let navigate = useNavigate()
