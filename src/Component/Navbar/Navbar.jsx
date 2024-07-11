@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Styles from './Navbar.module.css'
 import { useTranslation } from 'react-i18next';
 import { Navbar as BootstrapNavbar, Nav } from 'react-bootstrap';
@@ -9,6 +9,7 @@ import { clearCredentials } from '../../features/auth/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import logo from '../../imgs/logo.png'
 import profile from '../../imgs/profile.png'
+import { getSettings } from '../../features/settingsSlice';
 const Navbar = () => {
 
   const navigate = useNavigate(); // Ensure useNavigate is called
@@ -49,6 +50,12 @@ const Navbar = () => {
     dispatch(clearCredentials());
     navigate('/login');
   };
+
+  
+  useEffect(() => {
+      dispatch(getSettings());
+  }, [dispatch]);
+
   return (
     
     <BootstrapNavbar expand="lg" className={i18n.language === 'ar' ? 'text-right' : 'text-left' } style={{width: "100%", padding: "12px 24px"}}>
@@ -108,11 +115,11 @@ const Navbar = () => {
       
       
       
-      <Nav className={`${Styles.linksContainer} mx-3 w-100 px-4 d-flex`}>
-      <Nav.Link className={`${Styles.navLink}  px-4 my-2`} as={Link} to="/">{t('Home')}</Nav.Link>
-      <Nav.Link className={`${Styles.navLink}  px-4 my-2`} as={Link} to="/service">{t('servicesYPackages')}</Nav.Link>
-      <Nav.Link className={`${Styles.navLink}  px-4 my-2`} as={Link} to="/about-us">{t('About')}</Nav.Link>
-      <Nav.Link className={`${Styles.navLink}  px-4 my-2`} as={Link} to="/about">{t('AboutRoyal')}</Nav.Link>
+      <Nav className={`${Styles.linksContainer} mx-3 w-100 px-3 d-flex`}>
+      <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/">{t('Home')}</Nav.Link>
+      <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/service">{t('servicesYPackages')}</Nav.Link>
+      <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/about-us">{t('About')}</Nav.Link>
+      <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/about">{t('AboutRoyal')}</Nav.Link>
 
       <Dropdown style={dropdownToggleStyle}
       position={isArabic ?  'left' : 'right'}
@@ -177,11 +184,11 @@ const Navbar = () => {
     </Dropdown.Item>
   </Dropdown>
 
-      <Nav.Link className={`${Styles.navLink}  px-4 my-2`} as={Link} to="/results">{t('Results')}</Nav.Link>
-      <Nav.Link className={`${Styles.navLink}  px-4 my-2`} as={Link} to="/reserve">{t('Reserve')}</Nav.Link>
-      <Nav.Link className={`${Styles.navLink}  px-4 my-2`} as={Link} to="/apply-for-job">{t('ApplyJob')}</Nav.Link>
+      <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/results">{t('Results')}</Nav.Link>
+      <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/reserve">{t('Reserve')}</Nav.Link>
+      <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/apply-for-job">{t('ApplyJob')}</Nav.Link>
 
-      <Nav.Link className={`${Styles.navLink} px-4 my-2`} onClick={() => changeLanguage(i18n.language === 'en' ? 'ar' : 'en')}>
+      <Nav.Link className={`${Styles.navLink} px-3 my-2`} onClick={() => changeLanguage(i18n.language === 'en' ? 'ar' : 'en')}>
         {t('Switch Language')}
 
       </Nav.Link>

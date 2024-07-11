@@ -55,7 +55,7 @@ const Home = () => {
   const handleChangeMsg = (event) => {
     setMsg(event.target.value);
   };
-  const settings = useSelector((state) => state.settings.settings);
+  const settings = useSelector((state) => state.settings?.settings);
 
   const submitComment = async () => {
     setLoader(true);
@@ -163,29 +163,29 @@ const Home = () => {
 
           <div className={Styles.icons} style={{ [isRTL ? 'left' : 'right']: '200px', [isRTL ? 'right' : 'left']: 'auto' }}>
               {
-                settings.facebook_url && (
-                <a href={settings.facebook_url}>
+                settings?.facebook_url && (
+                <a href={settings?.facebook_url}>
                   <i className="fa-brands fa-facebook"></i>
                 </a>
                 )
               }
               {
-                settings.instagram_url && (
-                  <a href={settings.instagram_url}>
+                settings?.instagram_url && (
+                  <a href={settings?.instagram_url}>
                   <i className="fa-brands fa-instagram"></i>
                   </a>
                 )
               }
               {
-                settings.linkedin_url && (
-                  <a href={settings.linkedin_url}>
+                settings?.linkedin_url && (
+                  <a href={settings?.linkedin_url}>
                   <i className="fa-brands fa-linkedin"></i>
                   </a>
                 )
               }
               {
-                settings.location_url && (
-                  <a href={settings.location_url}>
+                settings?.location_url && (
+                  <a href={settings?.location_url}>
                     <i className="fa-solid fa-location-dot"></i>
                   </a>
                 )
@@ -193,15 +193,15 @@ const Home = () => {
           </div>
           <div className={Styles.fixedSocial}>
               {
-                settings.whatsapp_url && (
-                  <a href={settings.whatsapp_url} style={{textDecoration: "none"}}>
+                settings?.whatsapp_url && (
+                  <a href={settings?.whatsapp_url} style={{textDecoration: "none"}}>
                   <i className="fa-brands fa-whatsapp"></i>
                   </a>    
                 )
               }
               {
-                settings.phone && (
-                  <a href={"tel:" + settings.phone}  style={{textDecoration: "none"}}>
+                settings?.phone && (
+                  <a href={"tel:" + settings?.phone}  style={{textDecoration: "none"}}>
                   <i className="fa-solid fa-phone"></i>
                   </a>
                 )
@@ -447,18 +447,18 @@ const Home = () => {
         <div className="row">
           <div className="col-md-4">
             <i className={`${Styles.icona} fa-solid fa-vial-virus py-5`}></i>
-            <h3 className='pb-3'>{ currentLanguage == "ar" ? settings.package_ar_1 : settings.package_1 }</h3>
-            <p>{ currentLanguage == "ar" ? settings.package_desc_ar_1 : settings.package_desc_1 }</p>
+            <h3 className='pb-3'>{ currentLanguage == "ar" ? settings?.package_ar_1 : settings?.package_1 }</h3>
+            <p>{ currentLanguage == "ar" ? settings?.package_desc_ar_1 : settings?.package_desc_1 }</p>
           </div>
           <div className="col-md-4">
             <i className={`${Styles.icona} fa-solid fa-vial-virus py-5`}></i>
-            <h3 className='pb-3'>{ currentLanguage == "ar" ? settings.package_ar_2 : settings.package_2 }</h3>
-            <p>{ currentLanguage == "ar" ? settings.package_desc_ar_2 : settings.package_desc_2 }</p>
+            <h3 className='pb-3'>{ currentLanguage == "ar" ? settings?.package_ar_2 : settings?.package_2 }</h3>
+            <p>{ currentLanguage == "ar" ? settings?.package_desc_ar_2 : settings?.package_desc_2 }</p>
           </div>
           <div className="col-md-4">
             <i className={`${Styles.icona} fa-solid fa-vial-virus py-5`}></i>
-            <h3 className='pb-3'>{ currentLanguage == "ar" ? settings.package_ar_3 : settings.package_3 }</h3>
-            <p>{ currentLanguage == "ar" ? settings.package_desc_ar_3 : settings.package_desc_3 }</p>
+            <h3 className='pb-3'>{ currentLanguage == "ar" ? settings?.package_ar_3 : settings?.package_3 }</h3>
+            <p>{ currentLanguage == "ar" ? settings?.package_desc_ar_3 : settings?.package_desc_3 }</p>
           </div>
         </div>
       </div>

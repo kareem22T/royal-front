@@ -96,7 +96,7 @@ const Pharmacy = () => {
     }
   };
 
-  const settings = useSelector((state) => state.settings.settings);
+  const settings = useSelector((state) => state.settings?.settings);
   const currentLanguage = i18n.language;
 
   return (
@@ -104,7 +104,7 @@ const Pharmacy = () => {
       <h1 className={`${Styles.main} ${isRTL ? Styles.rtl : Styles.ltr}`}>{t('pharmaceuticalAnalyses')}</h1>
       <ToastContainer />
       <div className={`${Styles.upload}`}>
-        <p>{currentLanguage == "ar" ? settings.pharmaceutical_analyses_ar : settings.pharmaceutical_analyses}</p>
+        <p>{currentLanguage == "ar" ? settings?.pharmaceutical_analyses_ar : settings?.pharmaceutical_analyses}</p>
 
         <div className='d-flex flex-column w-100 mt-5'>
           <label htmlFor="namePharmacyAnalysis" className={Styles.labelOpt}>

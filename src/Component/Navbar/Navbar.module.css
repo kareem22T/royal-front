@@ -10,7 +10,7 @@
 .button1{
     background-color: rgba(179, 147, 48, 1);
     color: white;
-    padding: 15px 35px;
+    padding: 11px 22px;
     border: 0 ;
     border-radius: 8px;
     text-decoration: none;
@@ -18,13 +18,15 @@
     justify-content: center;
     align-items: center;
     white-space: nowrap;
-}
-
-
-.button2{
+    font-size: 14px;
+  }
+  
+  
+  .button2{
+  font-size: 14px;
     background-color: white;
     color: rgba(179, 147, 48, 1);
-    padding: 15px 35px;
+    padding: 11px 22px;
     border-radius: 8px;
     transition: all 1s;
     text-decoration: none;
@@ -78,8 +80,9 @@
 .navLink {
     color: black !important; /* Set link color to dark black */
     transition: all 1s;
-    font-size: 15px;
-    padding: 14px !important;
+    font-size: 15px !important;
+    white-space: nowrap;
+    padding: 10px !important;
   }
   .navLink:focus{
     background-color: rgba(179, 147, 48, 1) !important;

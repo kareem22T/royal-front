@@ -18,7 +18,6 @@ const Layoutt = () => {
   useEffect(() => {
     if (isAuthentication) {
       dispatch(fetchAllCart());
-      dispatch(getSettings());
     }
   }, [dispatch]);
 

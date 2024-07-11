@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 export default function Insurances() {
     const { t, i18n } = useTranslation();
     const isRTL = i18n.dir(i18n.language) === 'rtl';
-    const settings = useSelector((state) => state.settings.settings);
+    const settings = useSelector((state) => state.settings?.settings);
     const currentLanguage = i18n.language;
   
   return (
@@ -18,7 +18,7 @@ export default function Insurances() {
     <h4 className={`${Styles.main} ${isRTL ? Styles.rtl : Styles.ltr}`}>{t('Insurances')}</h4>
 
     <div className={`${Styles.first} mx-auto`}>
-    <p className={Styles.firstPara}>{currentLanguage == "ar" ? settings.medical_inssurence_ar : settings.medical_inssurence}</p>
+    <p className={Styles.firstPara}>{currentLanguage == "ar" ? settings?.medical_inssurence_ar : settings?.medical_inssurence}</p>
 
 
 
