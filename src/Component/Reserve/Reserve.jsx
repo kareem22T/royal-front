@@ -54,9 +54,9 @@ const Reserve = () => {
   const [branch_id, setBranchId] = useState('');
   const [service_id, setServiceId] = useState('');
   const [selectedDate, setSelectedDate] = useState(null); // State to store selected date/time
+  const [services, setService] = useState([]); // State to store selected date/time
 
   const dispatch = useDispatch();
-  const services = useSelector((state) => state.services.all_services);  
   const branches = useSelector((state) => state.branches.branches);  
   useEffect(() => {
     dispatch(getAllServices());
@@ -123,7 +123,7 @@ const Reserve = () => {
           phone: phone,
           date: selectedDate,
           branch_id: branch_id,
-          service_id: service_id,
+          service: service_id,
         }, {
           headers: {
             "Content-Type": "multipart/form-data",
@@ -142,6 +142,31 @@ const Reserve = () => {
       }
     }
   };
+  useEffect(() => {
+    // Define the URL of the API endpoint
+    const url = API + "/api/services-appointment/get";
+
+    // Use the fetch function to make a request to the API
+    fetch(url)
+      .then(response => {
+        // Check if the response is OK (status code 200-299)
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        // Parse the JSON from the response
+        return response.json()
+      })
+      .then(data => {
+        // Log the data to the console
+        setService(data.data[0]);
+        // You can also manipulate the data here
+      })
+      .catch(error => {
+        // Handle any errors that occurred during the fetch
+        console.error('There has been a problem with your fetch operation:', error);
+      });
+
+  }, [])
 
   return (
     <div dir={i18n.dir(i18n.language)}>
@@ -243,7 +268,7 @@ const Reserve = () => {
               {
                 services && (
                   services.map(service => (
-                    <option className={Styles.opt} value={service.id}>{currentLanguage == "ar" ? service.name_ar : service.name}</option>
+                    <option className={Styles.opt} value={service.name}>{currentLanguage == "ar" ? service.name_ar : service.name}</option>
                   ))
                 )
               }

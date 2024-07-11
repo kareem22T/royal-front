@@ -97,3 +97,82 @@
     }
   }
   
+  .Baqat{
+    margin: 30px 60px;
+    width:auto;
+  }
+  .blooadPhoto{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    height: 250px;
+    object-fit: cover;
+  }
+  .main::after{
+      content: '';
+      position: absolute;
+      top: 60px;
+      left: 45%;
+      width:150px ;
+      height: 8px;
+      background-color: #B39330;
+      border-radius: 5px;
+  }
+  .servicesCards{
+      background-color: #FFFFFF;
+      border: 0.5px solid #B39330;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 1px rgba(0, 0, 0, 0.25);
+      height: 100%;
+  }
+  
+  .buttonCart{
+      background-color: white;
+      color: rgba(179, 147, 48, 1);
+      padding: 10px 15px;
+      border: 0.5px solid  rgba(179, 147, 48, 1);
+      border-radius: 8px;
+      transition: all 1s;
+      text-decoration: none;
+  
+  }
+  .buttonCart:hover{
+      background-color: rgba(179, 147, 48, 1);
+      color: white;
+  }
+  
+  
+  .input-group {
+      position: relative;
+      width: 100%; /* Ensure the input group takes full width */
+    }
+    
+    .input-group-text {
+      background-color: #fff; /* Background color for the icon container */
+      border: none; /* Remove default border */
+    }
+    
+    .input-group-text i {
+      color: #555; /* Icon color */
+      cursor: pointer; /* Cursor style */
+      padding: 0 10px; /* Adjust padding as needed */
+    }
+  
+  
+  
+    @media (max-width: 895px) {
+  
+      .main::after{
+        content: '';
+        position: absolute;
+        top: 60px;
+        left: 100px;
+        right: 100px;
+        width:210px ;
+        height: 8px;
+        background-color: #B39330;
+        border-radius: 5px;
+    }
+  
+    }

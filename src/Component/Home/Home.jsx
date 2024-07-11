@@ -162,28 +162,50 @@ const Home = () => {
           {/* <div className={Styles.line} style={{ [isRTL ? 'left' : 'right']: '220px', [isRTL ? 'right' : 'left']: 'auto' }}></div> */}
 
           <div className={Styles.icons} style={{ [isRTL ? 'left' : 'right']: '200px', [isRTL ? 'right' : 'left']: 'auto' }}>
-              <a href={settings.facebook_url}>
-                <i className="fa-brands fa-facebook"></i>
-              </a>
-              <a href={settings.instagram_url}>
-                <i className="fa-brands fa-instagram"></i>
-              </a>
-              <a href={settings.linkedin_url}>
-                <i className="fa-brands fa-linkedin"></i>
-              </a>
-              <a href={settings.location_url}>
-              <i className="fa-solid fa-location-dot"></i>
-              </a>
+              {
+                settings.facebook_url && (
+                <a href={settings.facebook_url}>
+                  <i className="fa-brands fa-facebook"></i>
+                </a>
+                )
+              }
+              {
+                settings.instagram_url && (
+                  <a href={settings.instagram_url}>
+                  <i className="fa-brands fa-instagram"></i>
+                  </a>
+                )
+              }
+              {
+                settings.linkedin_url && (
+                  <a href={settings.linkedin_url}>
+                  <i className="fa-brands fa-linkedin"></i>
+                  </a>
+                )
+              }
+              {
+                settings.location_url && (
+                  <a href={settings.location_url}>
+                    <i className="fa-solid fa-location-dot"></i>
+                  </a>
+                )
+              }
           </div>
           <div className={Styles.fixedSocial}>
-              <a href={settings.whatsapp_url} style={{textDecoration: "none"}}>
-              <i className="fa-brands fa-whatsapp"></i>
-              </a>
-
-              <a href={"tel:" + settings.phone}  style={{textDecoration: "none"}}>
-              <i className="fa-solid fa-phone"></i>
-              </a>
-
+              {
+                settings.whatsapp_url && (
+                  <a href={settings.whatsapp_url} style={{textDecoration: "none"}}>
+                  <i className="fa-brands fa-whatsapp"></i>
+                  </a>    
+                )
+              }
+              {
+                settings.phone && (
+                  <a href={"tel:" + settings.phone}  style={{textDecoration: "none"}}>
+                  <i className="fa-solid fa-phone"></i>
+                  </a>
+                )
+              }
           </div>
         </div>
       </div>

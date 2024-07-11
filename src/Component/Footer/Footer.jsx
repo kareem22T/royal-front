@@ -30,15 +30,32 @@ const Footer = () => {
                     {t('TradeAssuranceli2')}
                   </Link>
                   </li>
-                <li>{t('TradeAssuranceli5')}</li>
               </ul>
             </div>
             <div className="col-md-3">
               <p>{t('knowus')}</p>
               <ul>
-                <li>{t('knowusl1')}</li>
-                <li>{t('knowusl2')}</li>
-                <li>{t('knowusl3')}</li>
+                <li>
+                <Link to={'/service'} className='text-decoration-none text-dark'>
+
+                  {t('servicesYPackages')}
+                  </Link>
+
+                  </li>
+                <li>
+                <Link to={'/about-us'} className='text-decoration-none text-dark'>
+
+                  {t('About')}
+                  </Link>
+
+                  </li>
+                <li>
+                <Link to={'/about-royal'} className='text-decoration-none text-dark'>
+
+                  {t('AboutRoyal')}
+                  </Link>
+
+                  </li>
                 <li>
                 <Link to={'/jopOffer'} className='text-decoration-none text-dark'>
 
@@ -51,8 +68,6 @@ const Footer = () => {
             <div className="col-md-3">
               <p>{t('Getsupport')}</p>
               <ul>
-                <li>{t('Getsupportl1')}</li>
-                <li>{t('Getsupportl2')}</li>
                 <li>
                 <Link to={'/problem'} className='text-decoration-none text-dark'>
                 {t('Getsupport5')}

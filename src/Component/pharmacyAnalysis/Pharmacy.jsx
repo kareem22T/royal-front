@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Styles from './Pharmacy.module.css';
 import { useTranslation } from 'react-i18next';
 import { ToastContainer, toast } from 'react-toastify';
