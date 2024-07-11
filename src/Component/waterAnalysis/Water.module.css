@@ -1,0 +1,125 @@
+* {
+    font-family: 'Cairo';
+  }
+  
+  .main {
+    margin: 30px 60px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .main::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 15%;
+    height: 8px;
+    background-color: #B39330;
+    border-radius: 5px;
+  }
+  
+  .ltr::after {
+    left: 0;
+    width: 17%;
+  }
+  
+  .rtl::after {
+    right: 0;
+  }
+  
+  .upload {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+   
+  }
+  
+ 
+  .theServe {
+    color: black !important;
+    margin: 15px 0;
+    font-weight: 700;
+  }
+
+
+  
+  .labelOpt {
+    margin-bottom: 20px; /* Space between the label and the input */
+    font-weight: bold; /* Make the label text bold */
+  }
+  
+  .inputField {
+    margin-bottom:15px ;
+    padding: 0.5rem;
+    width: 40%;
+    border: 1px solid #ccc; /* Border color for the inputs */
+    border-radius: 4px; /* Rounded corners for the inputs */
+    font-size: 1rem; /* Font size for the input text */
+    transition: all 1s;
+  }
+
+
+  
+  .send {
+    background-color: rgba(179, 147, 48, 1);
+    color: white;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    width: 25%;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .alignRight {
+    text-align: right !important;
+  }
+  
+  .alignLeft {
+    text-align: left !important;
+  }
+
+  @media (max-width: 768px) {
+    .upload {
+      width: 90%;
+    }
+
+    .inputgroup {
+      width: 100% !important;
+    }
+  
+    .send {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .main {
+      margin: 20px 30px;
+    }
+  
+    .send {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 400px) and (max-width : 800px){
+    
+    .inputField{
+        width: 100%;
+    }
+
+  }
+  @media screen and (max-width: 576px) {
+    .main::after{
+      width:140px
+    }
+    
+    
+  }

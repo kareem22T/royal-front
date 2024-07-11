@@ -1,0 +1,144 @@
+* {
+    font-family: 'Cairo';
+  }
+  
+  .main {
+    margin: 30px 60px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .main::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 20%;
+    height: 8px;
+    background-color: #B39330;
+    border-radius: 5px;
+  }
+  
+  .ltr::after {
+    left: 0;
+    width: 25%;
+  }
+  
+  .rtl::after {
+    right: 0;
+  }
+  
+  .upload {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    border: #B39330 1px solid;
+    border-radius: 20px;
+  }
+  .select {
+    width: 100%;
+    padding: 10px 30px 10px 10px; /* Adjust right padding for the arrow */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Adjust arrow position */
+    background-size: 16px; /* Adjust arrow size */
+  }
+  
+  .inputgroup {
+    width: 50% !important;
+    margin-bottom: 20px;
+  }
+  
+  .lableOpt {
+    color: black !important;
+    margin: 15px 0;
+    font-weight: 700;
+  }
+  
+  .opt {
+    font-weight: 700 !important;
+  }
+  
+  /* RTL specific adjustments for Arabic */
+  [dir="rtl"] .select {
+    background-position: left 10px center; 
+    padding: 15px 15px 15px 35px; 
+  }
+  
+  
+  .requestBtnNow {
+    background-color: rgba(179, 147, 48, 1);
+    color: white;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    width: 25%;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .theServe {
+    color: black !important;
+    margin: 15px 0;
+    font-weight: 700;
+  }
+  
+  .alignRight {
+    text-align: right !important;
+  }
+  
+  .alignLeft {
+    text-align: left !important;
+  }
+ 
+  .personalInfoDisplay {
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 100px;
+    padding: 15px;
+    border-radius: 8px;
+    white-space: pre-wrap; /* This preserves whitespace and new lines */
+  }
+  @media (max-width: 768px) {
+    .upload {
+      width: 90%;
+    }
+
+    .inputgroup {
+      width: 100% !important;
+    }
+  
+    .serveBtnNow {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .main {
+      margin: 20px 30px;
+    }
+    .main::after{
+      width:200px ;
+    }
+  
+    .requestBtnNow {
+      margin: auto;
+      width: 70% !important;
+
+    }
+  }
+

@@ -1,0 +1,159 @@
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+
+}
+
+.button1{
+    background-color: rgba(179, 147, 48, 1);
+    color: white;
+    padding: 15px 35px;
+    border: 0 ;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+.button2{
+    background-color: white;
+    color: rgba(179, 147, 48, 1);
+    padding: 15px 35px;
+    border-radius: 8px;
+    transition: all 1s;
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+.cartDot {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  background: red;
+  width: 24px;
+  height: 24px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+.profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50px; /* Ensure the container is a square */
+  height: a4; /* Ensure the container is a square */
+  border-radius: 50%;
+}
+
+.profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 50%; /* Make the image circular */
+
+  }
+
+
+
+
+.button2:hover{
+    background-color: rgba(179, 147, 48, 1);
+    color: white;
+}
+
+.navLink {
+    color: black !important; /* Set link color to dark black */
+    transition: all 1s;
+    font-size: 15px;
+    padding: 14px !important;
+  }
+  .navLink:focus{
+    background-color: rgba(179, 147, 48, 1) !important;
+    border-radius: 15px;
+  }
+  
+.imgLogo{
+    width: 100%;
+}
+
+.profileWrapper{
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+.profileWrapper img{
+  min-width: 55px;
+  max-width: 55px;
+  min-height: 55px;
+  max-height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profilePopUp {
+  position: absolute;
+  top: calc(100% + 16px);
+  width: 200px;
+  white-space: nowrap;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 1s;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.profilePopUp a, .profilePopUp button {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  padding: 12px;
+  transition: all .2s ease-in;
+  display: block;
+}
+.profilePopUp a:hover, .profilePopUp button:hover {
+  color: #b39330;
+}
+.profilePopUp button {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+@media (max-width: 1500px) {
+    .navLink{
+      margin : 0 !important ;
+    }
+
+  
+    .mx-auto {
+      justify-content: center;
+    }
+  
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  
+   
+  }

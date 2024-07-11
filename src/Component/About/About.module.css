@@ -1,0 +1,157 @@
+* {
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  .main {
+    margin: 40px 230px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .main::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Positioning the line just below the h1 */
+    width: 15%; /* Ensure the line spans the entire width of the h1 */
+    height: 8px;
+    background-color: #B39330;
+    border-radius: 5px;
+  }
+  
+  .ltr::after {
+    left: 0; /* Align to the left in LTR mode */
+    width: 12%;
+  }
+  
+  .rtl::after {
+    right: 0; /* Align to the right in RTL mode */
+  }
+  
+  .first {
+    width: 70%;
+    margin: 45px auto;
+    border: 1px solid #B39330;
+    padding: 30px;
+    font-weight: 700;
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    background-color: #fff;
+  }
+  
+  h1 {
+    font-weight: 700;
+  }
+  
+  .firstPara {
+    width: 90%;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.99;
+    margin: 15px auto;
+  }
+  
+  .secPara {
+    font-weight: 400;
+    width: 90%;
+    margin: 15px auto;
+  }
+  
+  .thirdPara {
+    font-weight: 400;
+    width: 90%;
+    margin: 15px auto;
+    text-align: center;
+    line-height: 1.69;
+  }
+  
+  .readeBtn {
+    background-color: rgba(179, 147, 48, 1);
+    color: white;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: max-content;
+  }
+  
+  ul li {
+    font-weight: 400;
+    line-height: 1.9;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .main {
+      margin: 40px 150px;
+    }
+    .first {
+      width: 80%;
+      margin: 35px auto;
+    }
+    .firstPara,
+    .secPara,
+    .thirdPara {
+      width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .main {
+      margin: 40px 100px;
+    }
+    .first {
+      width: 85%;
+      margin: 30px auto;
+    }
+    .firstPara,
+    .secPara,
+    .thirdPara {
+      width: 85%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .main {
+      margin: 40px 50px;
+    }
+    .first {
+      width: 90%;
+      margin: 25px auto;
+      padding: 25px;
+    }
+    .firstPara,
+    .secPara,
+    .thirdPara {
+      width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .main {
+      margin: 20px 20px;
+    }
+    .first {
+      width: 95%;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .main::after {
+        width: 130px;
+    }
+    .firstPara,
+    .secPara,
+    .thirdPara {
+      width: 95%;
+    }
+    .readeBtn {
+      padding: 8px 12px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  

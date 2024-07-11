@@ -1,0 +1,66 @@
+.footer {
+  background-image: url("./../../imgs/hans-reniers-lQGJCMY5qcM-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  font-weight: 600;
+  position: relative;
+  height: auto; /* Default height to fit content */
+}
+footer * {
+  color: #000 !important;
+  font-weight: 600 !important;
+}
+.logo {
+  width: 100%; /* Make the logo responsive within its container */
+  max-width: 350px; /* Limit the maximum width of the logo */
+  height: auto;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+}
+
+.alignRight {
+  direction: rtl;
+  text-align: right;
+}
+ul li {
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+}
+
+ul a{
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+}
+
+  .webbing {
+    text-decoration: none;
+    transition: all 0.5s;
+    color: #000;
+  }
+
+  .webbing:hover {
+    color: blue;
+    transform: scale(1.1);
+  }
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    height: auto; /* Allow the height to adjust based on content */
+  }
+
+  .logo {
+    max-width: 250px; /* Reduce max-width of the logo for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    max-width: 180px; /* Further reduce max-width of the logo for extra small screens */
+  }
+}

@@ -1,0 +1,55 @@
+.right{
+    border: 1px solid #B39330;
+    height: 95vh;
+}
+.buttonlogin{
+    width: 40%;
+    background-color: white;
+    color: rgba(179, 147, 48, 1);
+    padding: 10px 15px;
+    border: 0.5px solid  rgba(179, 147, 48, 1);
+    border-radius: 8px;
+    transition: all 1s;
+    text-decoration: none;
+    text-align: center;
+}
+.buttonLogin2{
+    background-color: rgba(179, 147, 48, 1);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.buttonlogin:hover{
+    background-color: rgba(179, 147, 48, 1);
+    color: white;
+
+}
+.loginImage{
+    width: 40%;
+}
+.emailLogin{
+    border: 1px solid #B39330 !important;
+}
+.forget{
+    color: #B39330;
+}
+.newAccount{
+    color: #B39330;
+    text-decoration: none;
+}
+.loginLink{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 576px) {
+    h1,p{
+        width: 100%;
+    }
+    .buttonlogin{
+        width: 100%;
+    }
+  }

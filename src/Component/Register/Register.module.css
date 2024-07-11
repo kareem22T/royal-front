@@ -1,0 +1,57 @@
+.right{
+    border: 1px solid #B39330;
+    height: 95vh;
+}
+.buttonRegister{
+    width: 40%;
+    background-color: white;
+    color: rgba(179, 147, 48, 1);
+    padding: 10px 15px;
+    border: 0.5px solid  rgba(179, 147, 48, 1);
+    border-radius: 8px;
+    transition: all 1s;
+    text-decoration: none;
+    text-align: center;
+}
+.buttonLogin2{
+    background-color: rgba(179, 147, 48, 1);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.buttonRegister:hover{
+    background-color: rgba(179, 147, 48, 1);
+    color: white;
+
+}
+.registerImage{
+    width: 40%;
+}
+.inputRegister{
+    border: 1px solid #B39330 !important;
+}
+
+.forget{
+    color: #B39330;
+}
+.newAccount{
+    color: #B39330;
+    text-decoration: none;
+}
+.registerLink{
+    font-weight: 700;
+    color: #AA8C2E;
+}
+
+@media screen and (max-width: 576px) {
+    h1,p{
+        width: 100%;
+    }
+    .buttonRegister{
+        width: 100%;
+    }
+  }

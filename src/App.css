@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+body{
+  max-width: 100vw;
+  overflow: hidden auto;
+  font-family: 'Cairo', sans-serif;
+
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text-right {
+  direction: rtl;
+}
+
+.text-left {
+  direction: ltr;
+}
+
+@media (max-width: 767.98px) {
+  
+  .carousel-item img{
+    max-height: 250px !important;
+    min-height: 250px !important;
+  }
+}
+
+.clientOpinion p.comment {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 4.5em; /* Adjust this value according to your line height */
+}
+
+.clientOpinion p.comment.expanded {
+  -webkit-line-clamp: unset;
+  max-height: unset;
+}
+
