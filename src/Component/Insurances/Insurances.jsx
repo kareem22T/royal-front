@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 export default function Insurances() {
-
-  
     const { t, i18n } = useTranslation();
     const isRTL = i18n.dir(i18n.language) === 'rtl';
     const settings = useSelector((state) => state.settings.settings);
