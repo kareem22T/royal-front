@@ -330,6 +330,8 @@ i18n
           'phoneWater' : 'Phone',
           'subjectWater' : 'Subject',
           'notesWater' : 'Notes',
+          "Forget": "Forgot your password?",
+          "getCode": "Get verification code",
 
           'sendWater' : 'Send',
 
@@ -532,11 +534,14 @@ i18n
                'TradeAssuranceli3' : 'Arriving on time',
                'TradeAssuranceli4' : 'After-sales protections',
                'TradeAssuranceli5' : 'Product monitoring services',
+               "enterCode": "Enter verfication code",
+               "Code": "Enter Verfication Code",
 
 
                'knowus' : 'get to know us',
                'knowusl1' : 'get to know us',
                'knowusl2' : 'Pay Alibaba.com',
+               'weveSendYOu' : 'We have sent you a verification code via your email',
                'knowusl3' : 'corporate responsibility',
                'knowusl4' : 'News Center',
                'knowusl4' : 'Jobs',
@@ -561,7 +566,9 @@ i18n
             "nameProblem" :'Mention The Problem ',
             'commentProblem' : 'Comment',
             'sendproblem' : 'Send',
-
+            'passwordNewConfir': "Password confirmation",
+            'passwordNew': "New Password",
+  
             
 
               //  Cart
@@ -603,12 +610,14 @@ i18n
                 'Vaccinations16' : 'Yes, it is safe, as all vaccines undergo extensive safety testing and evaluation before they are approved for administration to humans.',
                 'Vaccinations17' : 'What is the vaccination schedule?',
                 'Vaccinations18' : 'World health institutions have been keen to set global vaccination schedules, which include the age groups that should receive vaccinations, in addition to the number of doses they need and when they should receive them. We emphasize here that it is necessary for both children and adults to obtain their vaccinations according to the specified timetable, as following the timetable contributes to obtaining protection from diseases as necessary.',
+                'Vaccinations18' : 'World health institutions have been keen to set global vaccination schedules, which include the age groups that should receive vaccinations, in addition to the number of doses they need and when they should receive them. We emphasize here that it is necessary for both children and adults to obtain their vaccinations according to the specified timetable, as following the timetable contributes to obtaining protection from diseases as necessary.',
                 'Vaccinations19' : 'What are the side effects of vaccines?',
                 'Vaccinations20' : 'Most vaccinations are safe and do not cause serious side effects on the patient. However, in some cases, some patients may suffer from fever, rash, and diarrhea, which are conditions that can be easily treated after consulting a specialist doctor.',
                 'Vaccinations21' : 'Are vaccines given to pregnant women?',
                 'Vaccinations22' : 'There are some types of vaccine that must be given to pregnant women, such as diphtheria, tetanus, and whooping cough, while others are prohibited from being given during pregnancy, such as measles, German measles, and mumps. The influenza vaccine is also considered safe during pregnancy, and provides protection for the mother and her child, so a doctor must always be consulted in order for the pregnant woman to obtain the types of vaccine that are safe for her and to avoid danger to her and her fetus.',
                 'Vaccinations23' : 'What is World Immunization Week?',
                 'Vaccinations24' : 'Although immunization operations using various types of vaccines have been able to save millions of people around the world, according to the Saudi Ministry of Health, there are still more than 20 million children around the world who cannot take the vaccines they need. This has prompted international health organizations to designate the last week (24-30) of April each year, to raise awareness about immunizations and their importance in preventing serious diseases such as measles and polio. In this context, the Saudi Ministry of Health, represented by all its health facilities, contributes to raising health awareness on this topic',
+                'set': "Set",
                 
 
                 
@@ -652,6 +661,9 @@ i18n
           'uploaded' :'تم التحميل',
           'chooseCv' :'ملف السيرة الذاتية',
           'applyForJob' :'التقديم علي العمل',
+          'set': "تعين",
+          'passwordNewConfir': "تاكيد كلمة المرور",
+          'passwordNew': "كلمة المرور الجديدة",
 
           // login page
           'LoginPage' : 'تسجيل دخول',
@@ -659,6 +671,7 @@ i18n
           'errorMsgLogin'  :'كلمة مرور خاطئة' ,
           'logOut' : 'تسجيل خروج',
           'pls' :'سجل دخولك اولا',
+          "Code": "ادخل رمز التحقق",
           'service' : 'اسم الخدمة' ,
           'servicePrice' : 'سعر الخدمة' ,
           'recipientName' : "اسم المستلم" ,
@@ -676,6 +689,8 @@ i18n
           'under_review' : "تحت المراجعة" ,
           'confirmed' : "تم التاكيد" ,
           'completed' : "اكتمل" ,
+          "getCode": "احصل على رمز التحقق",
+          "weveSendYOu": "تم ارسال رمز التحقق عبر البريد الالكتروني بنجاح",
           'canceld' : "فشل او الغي" ,
 
           // there is contact us in the navbar and here
@@ -703,6 +718,7 @@ i18n
           "errorNameRequired": "ادخل الاسم",
           "errorMessageNamemin": "ادخل الاسم ثلاثي",
           "errorPhoneRequired": "الهاتف مطلوب",
+          "enterCode": "اكتب رمز التحقق المرسل عبر البريد",
           "errorPasswordRequired": "كلمة المرور مطلوبة",
           "errorPasswordMismatch": "كلمتا المرور غير متطابقتين",
           "errorPasswordComplexity": "يجب أن تحتوي كلمة المرور على حرف كبير وحرف صغير ورقم وحرف خاص، وأن تكون على الأقل ٨ أحرف",
@@ -770,6 +786,7 @@ i18n
           'waterAnalysis':'تحليل المياة',
           'pharmaAnalysis':'التحاليل الصيدلانية',
           'recipeMedical' : 'الوصفة الطبية',
+          "Forget": "هل نسيت كلمة السر؟",
           'chooseFileRecipe' : 'قم باختيار ملف الروشتة',
           'fileUploadedSuccessfully' : 'تم ارسال الروشتة بنجاح سوف نتواصل معك',
           'bloodAnalysis' : 'التحاليل الطبية ',

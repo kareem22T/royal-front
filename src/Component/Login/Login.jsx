@@ -140,7 +140,7 @@ const Login = () => {
                 ):''}
                 </div>
 
-                <p className={`${Styles.forget} mx-5`}>{t('forgetPassword')}</p>
+                <Link to={"/forget-password"} className={`${Styles.forget} mx-5`}>{t('forgetPassword')}</Link>
 
                <div className='d-flex flex-column align-items-center py-3'>
                 <button type='submit' className={` ${Styles.buttonLogin2} w-75 mb-3` } >

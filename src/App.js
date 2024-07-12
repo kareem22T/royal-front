@@ -37,6 +37,7 @@ import Vaccinations from './Component/Vaccinations/Vaccinations';
 import ReserveVisit from './Component/ReserveVisit/ReserveVisit';
 import Branches from './Component/Branches/Branches';
 import Team from './Component/Team/Team';
+import Forget from './Component/ForgetPasswoed/Forget';
 
 const App = () => {
   const { isAuthentication } = useAuth();
@@ -79,6 +80,7 @@ const App = () => {
             <Route path="pharmaAnalysis" element={<Pharmacy />} />
           </Route>
           <Route path="/login" element={isAuthentication ? <Navigate to="/" /> : <Login />} />
+          <Route path="/forget-password" element={isAuthentication ? <Navigate to="/" /> : <Forget />} />
           <Route path="/register" element={isAuthentication ? <Navigate to="/" /> : <Register />} />
         </Routes>
       </Router>
