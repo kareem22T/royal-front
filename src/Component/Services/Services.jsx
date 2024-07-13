@@ -42,9 +42,16 @@ const Services = () => {
   const packages_totalPages = useSelector((state) => state.services.packages_totalPages);  
   const packages_currentPage = useSelector((state) => state.services.packages_currentPage);  
   const [search_text, setSearch_text] = useState("")
+  const [selectedService, setSelectedService] = useState({})
+  const [showSelectedService, setShowSelectedService] = useState(false)
 
   const handleChange = (value) => {
     dispatch(fetchServices({page: value, per_page: 20}));
+  };
+
+  const handleShowMore = (service) => {
+    setSelectedService(service)
+    setShowSelectedService(true)
   };
 
   const handleChangePackages = (value) => {
@@ -111,7 +118,31 @@ const Services = () => {
       </div>
 
     </div>
+    {
+      (showSelectedService && selectedService) && (
+        <>
+          <div style={{zIndex: 99999, position: "fixed", top: 0, left: 0, width: "100%", height: "100%", overflow: 'auto', display: 'flex', justifyContent: "center", padding: 24, paddingTop: 48, maxHeight: "100vh", boxSizing: "border-box"}}>
+          <div className="col-lg-3 col-md-6  pb-5" style={{width: "100%", maxWidth: 400, height: "max-content", position: "relative", zIndex: 9999999}}>
+            <div className={`${Styles.servicesCards}`}>
+            <img height={200} className={Styles.blooadPhoto} src={API + selectedService.main_image} alt="" />
 
+              <p>{ currentLanguage == "ar" ? selectedService.name_ar : selectedService.name }</p>
+              <p>
+                {currentLanguage == "ar" ? selectedService.description_ar : selectedService.description}
+              </p>
+              <p>{selectedService.price + " " + t("SAR")}</p>
+
+              <button className={`${Styles.buttonCart} my-3`} onClick={() => handleAddProductToCart(selectedService.id)}>{t('addToCar')}</button>
+
+            </div>
+          </div>
+          <div onClick={() => {setSelectedService(false)}} style={{position: 'absolute', top: 0, left: 0, width: "100%", height: "100%",background: "rgba(0, 0, 0, 0)"}}></div>
+          </div>
+          <div onClick={() => {setSelectedService(false)}} className="fa fa-close" style={{position: 'fixed', top: 12, right: 12, cursor: 'pointer', fontSize: 30, color: "#fff", zIndex: 9999999999999999}}></div>
+          <div onClick={() => {setSelectedService(false)}} style={{position: 'fixed', top: 0, left: 0, width: "100%", height: "100%",background: "rgba(0, 0, 0, .3)"}}></div>
+        </>
+      )
+    }
     <h1 className={Styles.Baqat}>{t('Baqat')}</h1>
 
     <div className="row mx-5 mt-5 mb-3 ">
@@ -119,20 +150,29 @@ const Services = () => {
           packages && packages.length > 0 && (
             packages.map(service => (
               <div className="col-lg-3 col-md-6 pb-5">
-                  <div className={`${Styles.servicesCards}`}>
-                  <img height={200} className={Styles.blooadPhoto} src={API + service.main_image} alt="" />
+              <div className={`${Styles.servicesCards}`}>
+              <img height={200} className={Styles.blooadPhoto} src={API + service.main_image} alt="" />
 
-                    <p>{ currentLanguage == "ar" ? service.name_ar : service.name }</p>
-                    <p>{currentLanguage == "ar" ? (service.description_ar.length > 60 ? service.description_ar.substring(0, 60) + "..." : service.description_ar) : (service.description.length > 60 ? service.description.substring(0, 60) + "..." : service.description)}</p>
-                    <p>{service.price + " " + t("SAR")}</p>
+                <p>{ currentLanguage == "ar" ? service.name_ar : service.name }</p>
+                <p>
+                  {currentLanguage == "ar" ? (service.description_ar.length > 40 ? service.description_ar.substring(0, 40) + "..." : service.description_ar) : (service.description.length > 40 ? service.description.substring(0, 40) + "..." : service.description)}
+                  {((currentLanguage == "ar" ? service.description_ar : service.description).length > 40) && (
+                    <button 
+                      onClick={() => handleShowMore(service)} 
+                      style={{ background: 'transparent', border: 'none', color: '#b39330', fontWeight: 600 }}
+                    >
+                      {t('showMore')}
+                    </button>
+                  )}
+                </p>
+                <p>{service.price + " " + t("SAR")}</p>
 
-
-                    <button className={`${Styles.buttonCart} my-3`} onClick={() => handleAddProductToCart(service.id)}>{t('addToCar')}</button>
-
-                  </div>
+                <button className={`${Styles.buttonCart} my-3`} onClick={() => handleAddProductToCart(service.id)}>{t('addToCar')}</button>
 
               </div>
-            ))
+
+          </div>
+  ))
           )
         }
 
@@ -162,9 +202,18 @@ const Services = () => {
                         <img height={200} className={Styles.blooadPhoto} src={API + service.main_image} alt="" />
 
                           <p>{ currentLanguage == "ar" ? service.name_ar : service.name }</p>
-                          <p>{currentLanguage == "ar" ? (service.description_ar.length > 60 ? service.description_ar.substring(0, 60) + "..." : service.description_ar) : (service.description.length > 60 ? service.description.substring(0, 60) + "..." : service.description)}</p>
+                          <p>
+                            {currentLanguage == "ar" ? (service.description_ar.length > 40 ? service.description_ar.substring(0, 40) + "..." : service.description_ar) : (service.description.length > 40 ? service.description.substring(0, 40) + "..." : service.description)}
+                            {((currentLanguage == "ar" ? service.description_ar : service.description).length > 40) && (
+                              <button 
+                                onClick={() => handleShowMore(service)} 
+                                style={{ background: 'transparent', border: 'none', color: '#b39330', fontWeight: 600 }}
+                              >
+                                {t('showMore')}
+                              </button>
+                            )}
+                          </p>
                           <p>{service.price + " " + t("SAR")}</p>
-
 
                           <button className={`${Styles.buttonCart} my-3`} onClick={() => handleAddProductToCart(service.id)}>{t('addToCar')}</button>
 
