@@ -93,11 +93,11 @@ i18n
           'ElbahsAnTahalih' : 'Search for Tahalil',
           'UploadWasfa':'Upload a prescription',
           'Baqat' : 'Baqat',
-          'EGP' : 'EGP',
+          'SAR' : 'SAR',
           // will change according the card
           'Enzem':'Phosphokinase enzyme',
           'heartEnzem':'Heart enzymes - requested  when feeling chest pain',
-          'price' : '250 egp',
+          'price' : '250 SAR',
           'addToCar':'Add To Cart',
           'tahalilhLists' : 'Tahalil Lists',
           'services' : 'Services',
@@ -755,7 +755,7 @@ i18n
 
           'UploadWasfa' : 'تحميل وصفة طبية',
           'Baqat' : 'باقات',
-          'EGP' : 'جنيه مصري',
+          'SAR' : 'ريال سعودي',
           // will change according the card
           'Enzem':'إنزيم فوسفو كينز',
           'heartEnzem':'انزيمات قلب - يتم طلبه عند الشعور بآلام بالصدر',

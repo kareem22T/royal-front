@@ -67,7 +67,7 @@ const Cart = () => {
                         <div className={Styles.text}>
                           <h2 >
                             {currentLanguage == "ar" ? prod.product.name_ar : prod.product.name}</h2>
-                          <p className='d-flex gap-2 align-items-center'>{prod.product.price} {currentLanguage == 'ar' ? "جنيه مصري" : "EGP"}
+                          <p className='d-flex gap-2 align-items-center'>{prod.product.price} {currentLanguage == 'ar' ? "ريال سعودي" : "SAR"}
                             <svg onClick={() => handleRemoveProduct(prod.product.id)} style={{color: "#4e4e4e", cursor: 'pointer'}} xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-filled" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4e4e4e" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                               <path d="M20 6a1 1 0 0 1 .117 1.993l-.117 .007h-.081l-.919 11a3 3 0 0 1 -2.824 2.995l-.176 .005h-8c-1.598 0 -2.904 -1.249 -2.992 -2.75l-.005 -.167l-.923 -11.083h-.08a1 1 0 0 1 -.117 -1.993l.117 -.007h16z" stroke-width="0" fill="currentColor" />
@@ -90,7 +90,7 @@ const Cart = () => {
                 }
                 <div className="d-flex justify-content-between w-100">
                 <Link to={'/service'} className={Styles.addBtn}>{t('addMoreBaqat')}</Link>
-                <p className={`${Styles.cartPara} d-flex align-items-center justify-content-center py-2 px-2`}>{t('theAll') + cart.sub_total + " " } {currentLanguage == 'ar' ? "جنيه مصري" : "EGP"}</p>
+                <p className={`${Styles.cartPara} d-flex align-items-center justify-content-center py-2 px-2`}>{t('theAll') + cart.sub_total + " " } {currentLanguage == 'ar' ? "ريال سعودي" : "SAR"}</p>
                 </div>
 
                 <Link to="/checkout" className={` ${Styles.payBtn}`} style={{minWidth: 180, display: "block", textDecoration: "none", textAlign: 'center' }}>{t('payBtn')}</Link>

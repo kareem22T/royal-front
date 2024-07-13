@@ -69,7 +69,7 @@ const Order = () => {
         </div>
         <div className={Styles.inputGroup}>
           <label htmlFor="totla">{t('theAll')}</label>
-          <input type="text" name="total" id="total" disabled value={order?.sub_total + " " + (currentLanguage == 'ar' ? "جنيه مصري" : "EGP")}/>
+          <input type="text" name="total" id="total" disabled value={order?.sub_total + " " + (currentLanguage == 'ar' ? "ريال سعودي" : "SAR")}/>
         </div>
       </div>
       <ToastContainer />
@@ -91,7 +91,7 @@ const Order = () => {
                 order.products.map((product, index) => (
                   <tr>
                     <td>{currentLanguage == 'ar' ? product.product.name_ar : product.product.name}</td>
-                    <td>{product.product.price + ' '} {currentLanguage == 'ar' ? "جنيه مصري" : "EGP"}</td>
+                    <td>{product.product.price + ' '} {currentLanguage == 'ar' ? "ريال سعودي" : "SAR"}</td>
                   </tr>
                 ))
               )

@@ -124,7 +124,7 @@ const Services = () => {
 
                     <p>{ currentLanguage == "ar" ? service.name_ar : service.name }</p>
                     <p>{currentLanguage == "ar" ? (service.description_ar.length > 60 ? service.description_ar.substring(0, 60) + "..." : service.description_ar) : (service.description.length > 60 ? service.description.substring(0, 60) + "..." : service.description)}</p>
-                    <p>{service.price + " " + t("EGP")}</p>
+                    <p>{service.price + " " + t("SAR")}</p>
 
 
                     <button className={`${Styles.buttonCart} my-3`} onClick={() => handleAddProductToCart(service.id)}>{t('addToCar')}</button>
@@ -163,7 +163,7 @@ const Services = () => {
 
                           <p>{ currentLanguage == "ar" ? service.name_ar : service.name }</p>
                           <p>{currentLanguage == "ar" ? (service.description_ar.length > 60 ? service.description_ar.substring(0, 60) + "..." : service.description_ar) : (service.description.length > 60 ? service.description.substring(0, 60) + "..." : service.description)}</p>
-                          <p>{service.price + " " + t("EGP")}</p>
+                          <p>{service.price + " " + t("SAR")}</p>
 
 
                           <button className={`${Styles.buttonCart} my-3`} onClick={() => handleAddProductToCart(service.id)}>{t('addToCar')}</button>
@@ -204,7 +204,7 @@ const Services = () => {
 
                           <p>{ currentLanguage == "ar" ? service.name_ar : service.name }</p>
                           <p>{currentLanguage == "ar" ? (service.description_ar.length > 60 ? service.description_ar.substring(0, 60) + "..." : service.description_ar) : (service.description.length > 60 ? service.description.substring(0, 60) + "..." : service.description)}</p>
-                          <p>{service.price + " " + t("EGP")}</p>
+                          <p>{service.price + " " + t("SAR")}</p>
 
 
                           <button className={`${Styles.buttonCart} my-3`} onClick={() => handleAddProductToCart(service.id)}>{t('addToCar')}</button>

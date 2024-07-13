@@ -124,7 +124,7 @@ const Checkout = () => {
                         <div className={Styles.text} style={{margin: 0}}>
                           <h4 >
                             {currentLanguage == "ar" ? prod.product.name_ar : prod.product.name}</h4>
-                          <p className='d-flex gap-2 align-items-center'>{prod.product.price} {currentLanguage == 'ar' ? "جنيه مصري" : "EGP"}
+                          <p className='d-flex gap-2 align-items-center'>{prod.product.price} {currentLanguage == 'ar' ? "ريال سعودي" : "SAR"}
                           </p>
                         </div>
                       </div>
@@ -183,7 +183,7 @@ const Checkout = () => {
                     </div>
                     <div className="d-flex justify-content-between w-100">
                     <Link to={'/service'} className={Styles.addBtn}>{t('addMoreBaqat')}</Link>
-                    <p className={`${Styles.cartPara} d-flex align-items-center justify-content-center py-2 px-2`}>{t('theAll') + cart.sub_total + " " } {currentLanguage == 'ar' ? "جنيه مصري" : "EGP"}</p>
+                    <p className={`${Styles.cartPara} d-flex align-items-center justify-content-center py-2 px-2`}>{t('theAll') + cart.sub_total + " " } {currentLanguage == 'ar' ? "ريال سعودي" : "SAR"}</p>
                     </div>
     
                     <button className={` ${Styles.payBtn}`} style={{minWidth: 180}} onClick={handleOnsubmit}>{t('finish')}</button>
