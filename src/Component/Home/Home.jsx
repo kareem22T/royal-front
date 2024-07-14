@@ -277,7 +277,7 @@ const Home = () => {
               </div>
 
               <div className=" mb-3">
-              <Link className=" text-decoration-none text-black" to={'./medicalTests'}>
+              <Link className=" text-decoration-none text-black" to={'/service'}>
 
                 <div className={Styles.cardHome}>
                 <i className="fa-solid fa-droplet mb-3 fs-2"></i>

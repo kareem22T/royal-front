@@ -117,7 +117,6 @@ const Navbar = () => {
       
       <Nav className={`${Styles.linksContainer} mx-3 w-100 px-3 d-flex`}>
       <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/">{t('Home')}</Nav.Link>
-      <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/service">{t('servicesYPackages')}</Nav.Link>
       <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/about-us">{t('About')}</Nav.Link>
       <Nav.Link className={`${Styles.navLink}  px-3 my-2`} as={Link} to="/about">{t('AboutRoyal')}</Nav.Link>
 
