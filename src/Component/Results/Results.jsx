@@ -17,13 +17,15 @@ const Results = () => {
   const [results, setResults] = useState([])
   const [totalPages, setTotal] = useState(1);  
   const [currentPage, setPage] = useState(1);  
+  const [loading, setLoading] = useState(true)
 
   const [msg ,setMsg] = useState('')
 
   useEffect(() => {
     const getUserData = async () => {
+      setLoading(true)
       try {
-        const res = await api.get('https://royal-lab.webbing-agency.com/api/user/results');
+        const res = await api.get('https://royal-lab.webbing-agency.com/api/user/user-results');
         if (res.data.status === true) {
           console.log(res.data.data);
           setResults(res.data.data.data)
@@ -34,6 +36,7 @@ const Results = () => {
             const message = currentLanguage === "ar" ? 'لا يوجد نتايج حاليا !' : 'there is no results now !';
             setMsg(message); 
           }
+          setLoading(false)
         }
       } catch (err) {
         console.error('Error fetching user data:', err);
@@ -44,13 +47,16 @@ const Results = () => {
   }, []);
 
   const handleChange = async (value) => {
+    setLoading(true)
     try {
-      const res = await api.get(`https://royal-lab.webbing-agency.com/api/user/results?page=${value}`);
+      const res = await api.get(`https://royal-lab.webbing-agency.com/api/user/user-results?page=${value}`);
       if (res.data.status === true) {
         setResults(res.data.data.data)
         setTotal(res.data.data.last_page)
         setPage(res.data.data.current_page)
       }
+      setLoading(false)
+
     } catch (err) {
       console.error('Error fetching user data:', err);
 
@@ -65,7 +71,7 @@ const Results = () => {
       {msg ? <h1 className='text-center'>{msg}</h1> : ''}
 
       {
-        (results && results.length > 0) && (
+        ((results && results.length > 0) && !loading) && (
           results.map(res => (
             <div className={`${Styles.first} my-5 d-flex flex-row align-items-center justify-content-between`}>
             <div>
@@ -73,7 +79,7 @@ const Results = () => {
               <p>{t('servicesp2') + ( res.date)}</p>
               <p>{t('servicesp3') + (currentLanguage == "ar" ? (res.status == 2 ? "اكتملت" : "قيد الانتظار") : (res.status == 2 ? "Completed" : "Waiting"))}</p>
               {res.file && (
-              <a href={API + res.file} download="download" target='_blank' className={Styles.uploadPdf + " d-block"}>{t('updloadPdf')}</a>
+              <a href={API + '/public/' + res.file} download="download" target='_blank' className={Styles.uploadPdf + " d-block"}>{t('updloadPdf')}</a>
               )}
             </div>
                 
@@ -99,6 +105,11 @@ const Results = () => {
 
             </div>
           ))
+        )
+      }
+      {
+        loading && (
+          <h1 className='text-center'>جاري التحميل </h1>
         )
       }
       <div style={{margin: "auto", display: "block", marginBottom: 16, width: "max-content"}}>
