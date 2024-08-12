@@ -26,19 +26,19 @@ const About = () => {
 
       <div className={`${Styles.first} mx-auto`}>
         <h1>{t('ourMsg')}</h1>
-        <p className={Styles.secPara}>{currentLanguage == "ar" ? settings?.about_msg : settings?.about_msg}</p>
+        <p className={Styles.secPara}>{currentLanguage == "ar" ? settings?.about_msg_ar : settings?.about_msg}</p>
 
       </div>
 
       <div className={`${Styles.first} mx-auto`}>
         <h1>{t('ourValue')}</h1>
-        <p className={Styles.secPara}>{currentLanguage == "ar" ? settings?.about_value : settings?.about_value}</p>
+        <p className={Styles.secPara}>{currentLanguage == "ar" ? settings?.about_value_ar : settings?.about_value}</p>
    
       </div>
 
       <div className={`${Styles.first} mx-auto`}>
         <h1>{t('Ourgoals')}</h1>
-        <p className={Styles.secPara}>{currentLanguage == "ar" ? settings?.about_goals : settings?.about_goals}</p>
+        <p className={Styles.secPara}>{currentLanguage == "ar" ? settings?.about_goals_ar : settings?.about_goals}</p>
       </div>
     </div>
   );

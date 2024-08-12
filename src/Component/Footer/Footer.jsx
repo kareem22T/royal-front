@@ -83,7 +83,7 @@ const Footer = () => {
         <p>{t('rightssave1')}</p>
         
 
-        <p>Powered by <a className={Styles.webbing} href="http://webbing-agency.com/">webbing agency</a></p>
+        {/* <p>Powered by <a className={Styles.webbing} href="http://webbing-agency.com/">webbing agency</a></p> */}
         </div>
         
       </div>
